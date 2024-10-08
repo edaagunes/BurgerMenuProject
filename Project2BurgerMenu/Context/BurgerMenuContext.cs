@@ -13,5 +13,6 @@ namespace Project2BurgerMenu.Content
         public DbSet<Product> Products { get; set; }
         public DbSet<DealOfTheDay> DealOfTheDays { get; set; }
         public DbSet<Testimonial> Testimonials { get; set; }
+        public DbSet<Admin> Admins { get; set; }
     }
 }
