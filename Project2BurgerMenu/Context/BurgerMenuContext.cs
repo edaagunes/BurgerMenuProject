@@ -5,7 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-namespace Project2BurgerMenu.Content
+namespace Project2BurgerMenu.Context
 {
     public class BurgerMenuContext:DbContext
     {

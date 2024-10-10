@@ -130,8 +130,10 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminLayoutController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Context\BurgerMenuContext.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Entities\Admin.cs" />
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\DealOfTheDay.cs" />
@@ -143,6 +145,10 @@
     <Compile Include="Migrations\202410081117016_mig1.cs" />
     <Compile Include="Migrations\202410081117016_mig1.Designer.cs">
       <DependentUpon>202410081117016_mig1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202410101110080_mig2.cs" />
+    <Compile Include="Migrations\202410101110080_mig2.Designer.cs">
+      <DependentUpon>202410101110080_mig2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1608,6 +1614,9 @@
     <Content Include="Areas\Admin\Views\AdminLayout\PartialNavBar.cshtml" />
     <Content Include="Areas\Admin\Views\AdminLayout\PartialSidebar.cshtml" />
     <Content Include="Areas\Admin\Views\Category\CategoryList.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\ProductList.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\CreateProduct.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\UpdateProduct.cshtml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -1633,6 +1642,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1674,6 +1684,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202410081117016_mig1.resx">
       <DependentUpon>202410081117016_mig1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202410101110080_mig2.resx">
+      <DependentUpon>202410101110080_mig2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
