@@ -138,6 +138,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Entities\About.cs" />
     <Compile Include="Entities\Admin.cs" />
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\DealOfTheDay.cs" />
@@ -157,6 +158,10 @@
     <Compile Include="Migrations\202410151130252_mig3.cs" />
     <Compile Include="Migrations\202410151130252_mig3.Designer.cs">
       <DependentUpon>202410151130252_mig3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202410151507013_mig4.cs" />
+    <Compile Include="Migrations\202410151507013_mig4.Designer.cs">
+      <DependentUpon>202410151507013_mig4.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1708,6 +1713,13 @@
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Default\PartialHead.cshtml" />
     <Content Include="Views\Default\PartialNavBar.cshtml" />
+    <Content Include="Views\Default\PartialAbout.cshtml" />
+    <Content Include="Views\Default\PartialTodaysOffer.cshtml" />
+    <Content Include="Views\Default\PartialMenu.cshtml" />
+    <Content Include="Views\Default\PartialGallery.cshtml" />
+    <Content Include="Views\Default\PartialContact.cshtml" />
+    <Content Include="Views\Default\PartialFooter.cshtml" />
+    <Content Include="Views\Default\PartialScript.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1755,6 +1767,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202410151130252_mig3.resx">
       <DependentUpon>202410151130252_mig3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202410151507013_mig4.resx">
+      <DependentUpon>202410151507013_mig4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

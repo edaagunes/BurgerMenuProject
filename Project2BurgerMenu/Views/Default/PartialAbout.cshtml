@@ -1,0 +1,22 @@
+﻿@model List<Project2BurgerMenu.Entities.About>
+
+<section class="site-section" id="section-about">
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+            <div class="col-md-5 site-animate mb-5">
+                <h4 class="site-sub-title">@item.Subtitle</h4>
+                <h2 class="site-primary-title display-4">@item.Title</h2>    
+                <p class="mb-4">@item.Description</p>
+                <p><a href="#" class="btn btn-secondary btn-lg">Hakkımızda Daha Fazla Bilgi Edinin</a></p>
+            </div>
+            }
+            <div class="col-md-1"></div>
+            <div class="col-md-6 site-animate img" data-animate-effect="fadeInRight">
+                <img src="/eatwell-master/images/about_img_1.jpg" alt="Free Template by colorlib.com" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END section -->
