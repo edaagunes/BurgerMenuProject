@@ -5,6 +5,9 @@ using System.Web;
 using System.Web.Mvc;
 using Project2BurgerMenu.Context;
 using Project2BurgerMenu.Entities;
+using PagedList;
+using PagedList.Mvc;
+
 
 
 namespace Project2BurgerMenu.Areas.Admin.Controllers
@@ -13,9 +16,9 @@ namespace Project2BurgerMenu.Areas.Admin.Controllers
     public class ProductController : Controller
     {
         BurgerMenuContext context = new BurgerMenuContext();
-        public ActionResult ProductList()
+        public ActionResult ProductList(int page = 1)
         {
-            var values = context.Products.ToList();
+            var values = context.Products.ToList().ToPagedList(page,4);
             return View(values);
         }
         [HttpGet]
@@ -74,6 +77,13 @@ namespace Project2BurgerMenu.Areas.Admin.Controllers
             value.CategoryID = product.CategoryID;
             context.SaveChanges();
             return RedirectToAction("ProductList");
+        }
+
+        // Secilen Kategoriye Ait Ürünleri Listeler
+        public ActionResult CategoryProducts(int id)
+        {
+            var values = context.Products.Where(x => x.CategoryID == id).ToList();
+            return View(values);
         }
     }
 }

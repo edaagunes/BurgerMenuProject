@@ -28,14 +28,14 @@
                             <tr>
                                 <td>@item.CategoryID</td>
                                 <td>@item.CategoryName</td>
-                                <td><a href="#" class="btn btn-warning">Kategori Ürünleri</a></td>
-                                <td><a href="#" class="btn btn-danger">Sil</a></td>
-                                <td><a href="#" class="btn btn-success">Güncelle</a></td>
+                                <td><a href="@Url.Action("CategoryProducts", "Product", new { id = item.CategoryID })" class="btn btn-warning">Ürünleri Listele</a></td>
+                                <td><a href="@Url.Action("DeleteCategory", "Category", new { area = "Admin", id = item.CategoryID })" class="btn btn-danger">Sil</a></td>
+                                <td><a href="@Url.Action("UpdateCategory", "Category", new { area = "Admin", id = item.CategoryID })" class="btn btn-success">Güncelle</a></td>
                             </tr>
                         }
                     </tbody>
                 </table>
-                <a href="#" class="btn btn-primary">Yeni Kategori Girişi</a>
+                <a href="@Url.Action("CreateCategory", "Category", new { area = "Admin" })" class="btn btn-primary">Yeni Kategori Ekle</a>
             </div>
         </div>
     </div>
