@@ -151,6 +151,7 @@
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\DealOfTheDay.cs" />
     <Compile Include="Entities\Product.cs" />
+    <Compile Include="Entities\Reservation.cs" />
     <Compile Include="Entities\Testimonial.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -170,6 +171,14 @@
     <Compile Include="Migrations\202410151507013_mig4.cs" />
     <Compile Include="Migrations\202410151507013_mig4.Designer.cs">
       <DependentUpon>202410151507013_mig4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202410181121244_mig5.cs" />
+    <Compile Include="Migrations\202410181121244_mig5.Designer.cs">
+      <DependentUpon>202410181121244_mig5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202410181248388_mig6.cs" />
+    <Compile Include="Migrations\202410181248388_mig6.Designer.cs">
+      <DependentUpon>202410181248388_mig6.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1732,9 +1741,10 @@
     <Content Include="Views\Default\PartialTodaysOffer.cshtml" />
     <Content Include="Views\Default\PartialMenu.cshtml" />
     <Content Include="Views\Default\PartialGallery.cshtml" />
-    <Content Include="Views\Default\PartialContact.cshtml" />
     <Content Include="Views\Default\PartialFooter.cshtml" />
     <Content Include="Views\Default\PartialScript.cshtml" />
+    <Content Include="Views\Default\PartialCategory.cshtml" />
+    <Content Include="Views\Default\PartialReservation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1785,6 +1795,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202410151507013_mig4.resx">
       <DependentUpon>202410151507013_mig4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202410181121244_mig5.resx">
+      <DependentUpon>202410181121244_mig5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202410181248388_mig6.resx">
+      <DependentUpon>202410181248388_mig6.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

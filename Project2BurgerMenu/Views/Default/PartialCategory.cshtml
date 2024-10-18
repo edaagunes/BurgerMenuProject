@@ -1,0 +1,11 @@
+﻿@model List<Project2BurgerMenu.Entities.Category>
+
+<ul class="nav site-tab-nav nav-pills mb-5" id="pills-tab" role="tablist">
+
+    @foreach (var item in Model)
+    {
+        <li class="nav-item site-animate">
+            <a class="nav-link active" id="pills-breakfast-tab" data-toggle="pill" href="#pills-breakfast" role="tab" aria-controls="pills-breakfast" aria-selected="true">@item.CategoryName</a>
+        </li>
+    }
+</ul>
