@@ -6,17 +6,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
-@Html.Action("PartialHead","AdminLayout","Admin")
+@Html.Action("PartialHead", "AdminLayout", "Admin")
+
 
 <body>
     <div class="container-scroller">
         <!-- partial:../../partials/_navbar.html -->
-        @Html.Action("PartialNavBar", "AdminLayout","Admin")
+        @Html.Action("PartialNavBar", "AdminLayout", "Admin")
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
 
             <!-- partial:../../partials/_sidebar.html -->
-            @Html.Action("PartialSidebar", "AdminLayout","Admin")
+            @Html.Action("PartialSidebar", "AdminLayout", "Admin")
             <!-- partial -->
             <div class="main-panel">
                 <div class="content-wrapper">
