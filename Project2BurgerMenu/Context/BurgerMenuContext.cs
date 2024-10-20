@@ -16,6 +16,7 @@ namespace Project2BurgerMenu.Context
         public DbSet<Admin> Admins { get; set; }
         public DbSet<About> Abouts { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
+        public DbSet<Message> Messages { get; set; }
        
     }
 }

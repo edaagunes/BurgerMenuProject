@@ -1,0 +1,54 @@
+﻿@model List<Project2BurgerMenu.Entities.Message>
+@{
+    ViewBag.Title = "Inbox";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<br />
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Mesaj Kutusu</h4>
+            <p class="card-description">
+            </p>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Mesaj ID</th>
+                            <th>Gönderen</th>
+                            <th>Email Adresi</th>
+                            <th>Gönderim Tarihi</th>
+                            <th>Durum</th>
+                            <th>Sil</th>
+                            <th>Mesaj Detayları</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.MessageID</td>
+                                <td>@item.Name</td>
+                                <td>@item.Email</td>
+                                <td>@item.SendDate.ToString("dd / MM / yyyy")</td>
+                                @if (item.IsRead == false)
+                                {
+                                    <td><a href="@Url.Action("MessageStatusChangeToTrue", "Message", new { area = "Admin", id = item.MessageID })" class="btn btn-inverse-primary btn-fw">Okundu Olarak İşaretle</a></td>
+                                }
+                                else
+                                {
+                                    <td><a href="@Url.Action("MessageStatusChangeToFalse", "Message", new { area = "Admin", id = item.MessageID })" class="btn btn-primary">Okunmadı Olarak İşaretle</a></td>
+                                }
+
+                                <td><a href="@Url.Action("DeleteMessage", "Message", new { area = "Admin", id = item.MessageID })" class="btn btn-danger">Sil</a></td>
+                                <td><a href="@Url.Action("DetailMessage", "Message", new { area = "Admin", id = item.MessageID })" class="btn btn-success">Detaylar</a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

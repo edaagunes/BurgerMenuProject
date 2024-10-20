@@ -24,6 +24,7 @@
                             <th>Ürün Kategori</th>
                             <th>Sil</th>
                             <th>Güncelle</th>
+                            <th>Günün Yemeği</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -36,6 +37,16 @@
                                 <td>@item.Category.CategoryName</td>
                                 <td><a href="/Admin/Product/DeleteProduct/@item.ProductID" class="btn btn-danger">Sil</a></td>
                                 <td><a href="/Admin/Product/UpdateProduct/@item.ProductID" class="btn btn-success">Güncelle</a></td>
+
+                                @if (item.DealofTheDay == false)
+                                {
+                                    <td><a href=" @Url.Action("DealofTheDayChangeToTrue", "Product", new { area = "Admin", id = item.ProductID })" class="btn btn-inverse-secondary btn-fw">Günün Yemeği Seç</a></td>
+                                   
+                                }
+                                else
+                                {
+                                    <td><a href=" @Url.Action("DealofTheDayChangeToFalse", "Product", new { area = "Admin", id = item.ProductID })" class="btn btn-secondary">Günün Yemeği</a></td>
+                                }
                             </tr>
                         }
                     </tbody>
@@ -43,7 +54,7 @@
                 @Html.PagedListPager((IPagedList)Model, page => Url.Action("ProductList", new { page }), new PagedListRenderOptions
                 {
                     LiElementClasses = new List<string>
-                    { "page-link"}
+                        { "page-link"}
                 })
 
                 <a href="/Admin/Product/CreateProduct/" class="btn btn-primary">Yeni Ürün Girişi</a>

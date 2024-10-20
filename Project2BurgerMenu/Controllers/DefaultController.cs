@@ -17,6 +17,16 @@ namespace Project2BurgerMenu.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult Index(Message message)
+        {
+            message.SendDate = DateTime.Now;
+            message.IsRead = false;
+            context.Messages.Add(message);
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
         public PartialViewResult PartialHead()
         {
             return PartialView();

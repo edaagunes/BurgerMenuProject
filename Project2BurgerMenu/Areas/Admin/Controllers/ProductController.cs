@@ -85,5 +85,21 @@ namespace Project2BurgerMenu.Areas.Admin.Controllers
             var values = context.Products.Where(x => x.CategoryID == id).ToList();
             return View(values);
         }
+
+        public ActionResult DealofTheDayChangeToTrue(int id)
+        {
+            var value = context.Products.Where(x => x.ProductID == id).FirstOrDefault();
+            value.DealofTheDay = true;
+            context.SaveChanges();
+            return RedirectToAction("ProductList");
+        }
+
+        public ActionResult DealofTheDayChangeToFalse(int id)
+        {
+            var value = context.Products.Where(x => x.ProductID == id).FirstOrDefault();
+            value.DealofTheDay = false;
+            context.SaveChanges();
+            return RedirectToAction("ProductList");
+        }
     }
 }

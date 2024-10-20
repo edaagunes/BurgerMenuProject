@@ -138,6 +138,7 @@
     <Compile Include="Areas\Admin\Controllers\AboutController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminLayoutController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MessageController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProfileController.cs" />
     <Compile Include="Context\BurgerMenuContext.cs" />
@@ -150,6 +151,7 @@
     <Compile Include="Entities\Admin.cs" />
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\DealOfTheDay.cs" />
+    <Compile Include="Entities\Message.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\Reservation.cs" />
     <Compile Include="Entities\Testimonial.cs" />
@@ -179,6 +181,10 @@
     <Compile Include="Migrations\202410181248388_mig6.cs" />
     <Compile Include="Migrations\202410181248388_mig6.Designer.cs">
       <DependentUpon>202410181248388_mig6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202410201144430_mig7.cs" />
+    <Compile Include="Migrations\202410201144430_mig7.Designer.cs">
+      <DependentUpon>202410201144430_mig7.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1706,6 +1712,8 @@
     <Content Include="Areas\Admin\Views\Category\CreateCategory.cshtml" />
     <Content Include="Areas\Admin\Views\Category\UpdateCategory.cshtml" />
     <Content Include="Areas\Admin\Views\Product\CategoryProducts.cshtml" />
+    <Content Include="Areas\Admin\Views\Message\Inbox.cshtml" />
+    <Content Include="Areas\Admin\Views\Message\DetailMessage.cshtml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -1755,6 +1763,7 @@
     <Folder Include="regal\.git\objects\pack\" />
     <Folder Include="regal\.git\refs\tags\" />
     <Folder Include="regal\template\" />
+    <Folder Include="Views\Message\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -1801,6 +1810,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202410181248388_mig6.resx">
       <DependentUpon>202410181248388_mig6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202410201144430_mig7.resx">
+      <DependentUpon>202410201144430_mig7.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
