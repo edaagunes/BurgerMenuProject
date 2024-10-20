@@ -34,5 +34,12 @@ namespace Project2BurgerMenu.Controllers
             }
         }
 
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+          //  Session.Clear();
+            return RedirectToAction("Index", "Login");
+        }
+
     }
 }

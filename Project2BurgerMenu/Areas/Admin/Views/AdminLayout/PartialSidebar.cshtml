@@ -1,4 +1,10 @@
 ﻿<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <style>
+        .nav-link i {
+            margin-right: 10px; /* İkon ile başlık arasındaki boşluk */
+            font-size: 18px;
+        }
+    </style>
     <div class="user-profile">
         <div class="user-image">
             <img src="/regal/images/faces/face28.png">
@@ -13,79 +19,79 @@
     <ul class="nav">
         <li class="nav-item">
             <a class="nav-link" href="../../index.html">
-                <i class="icon-box menu-icon"></i>
-                <span class="menu-title">Dashboard</span>
+                <i class="icon-heart"></i>
+                <span class="menu-title"> Dashboard</span>
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="@Url.Action("CategoryList", "Category", new { area = "Admin" })">
-                <i class="icon-file menu-icon"></i>
-                <span class="menu-title">Kategoriler</span>
+                <i class="icon-layout"></i>
+                <span class="menu-title"> Kategoriler</span>
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="@Url.Action("ProductList", "Product", new { area = "Admin" })">
-                <i class="icon-pie-graph menu-icon"></i>
+                <i class="icon-stack"></i>
                 <span class="menu-title">Ürünler</span>
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="../../pages/tables/basic-table.html">
-                <i class="icon-command menu-icon"></i>
+                <i class="icon-watch"></i>
                 <span class="menu-title">Rezervasyonlar</span>
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="@Url.Action("Inbox", "Message", new { area = "Admin" })">
-                <i class="icon-help menu-icon"></i>
+                <i class="icon-mail"></i>
                 <span class="menu-title">Mesajlar</span>
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="@Url.Action("AboutList", "About", new { area = "Admin" })">
-                <i class="icon-help menu-icon"></i>
+                <i class="icon-head"></i>
                 <span class="menu-title">Hakkımızda</span>
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="../../pages/icons/feather-icons.html">
-                <i class="icon-help menu-icon"></i>
+                <i class="icon-ribbon"></i>
                 <span class="menu-title">Referanslar</span>
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="../../pages/icons/feather-icons.html">
-                <i class="icon-help menu-icon"></i>
+                <i class="icon-target"></i>
                 <span class="menu-title">İstatistikler</span>
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="../../pages/icons/feather-icons.html">
-                <i class="icon-help menu-icon"></i>
+                <i class="icon-pie-graph"></i>
                 <span class="menu-title">Grafikler</span>
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="../../pages/icons/feather-icons.html">
-                <i class="icon-help menu-icon"></i>
+                <i class="icon-clipboard"></i>
                 <span class="menu-title">Raporlar</span>
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="@Url.Action("Index", "CreditCard", new { area = "Admin" })">
-                <i class="icon-help menu-icon"></i>
+                <i class="icon-marquee"></i>
                 <span class="menu-title">Kredi Kartı</span>
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="../../pages/icons/feather-icons.html">
-                <i class="icon-help menu-icon"></i>
+                <i class="icon-help"></i>
                 <span class="menu-title">Ayarlar</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="../../pages/icons/feather-icons.html">
-                <i class="icon-help menu-icon"></i>
+            <a class="nav-link" href="@Url.Action("LogOut", "Login", new { area = "" })">
+                <i class="icon-arrow-right"></i>
                 <span class="menu-title">Çıkış Yap</span>
             </a>
         </li>
