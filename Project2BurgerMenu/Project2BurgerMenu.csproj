@@ -138,6 +138,7 @@
     <Compile Include="Areas\Admin\Controllers\AboutController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminLayoutController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CreditCardController.cs" />
     <Compile Include="Areas\Admin\Controllers\MessageController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProfileController.cs" />
@@ -210,6 +211,7 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\PagedList.css" />
+    <Content Include="Content\style.css" />
     <Content Include="eatwell-master\.gitattributes" />
     <Content Include="eatwell-master\css\ajax-loader.gif" />
     <Content Include="eatwell-master\css\animate.css" />
@@ -251,6 +253,8 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\chip.png" />
+    <Content Include="img\visa.png" />
     <Content Include="regal\.gitattributes" />
     <Content Include="regal\.gitignore" />
     <Content Include="regal\css\style.css" />
@@ -1714,6 +1718,7 @@
     <Content Include="Areas\Admin\Views\Product\CategoryProducts.cshtml" />
     <Content Include="Areas\Admin\Views\Message\Inbox.cshtml" />
     <Content Include="Areas\Admin\Views\Message\DetailMessage.cshtml" />
+    <Content Include="Areas\Admin\Views\CreditCard\Index.cshtml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
