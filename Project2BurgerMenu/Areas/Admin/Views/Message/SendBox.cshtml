@@ -1,6 +1,6 @@
 ﻿@model List<Project2BurgerMenu.Entities.Message>
 @{
-    ViewBag.Title = "Inbox";
+    ViewBag.Title = "SendBox";
     Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
     int count = 0;
 }
@@ -8,7 +8,7 @@
 <div class="col-lg-12 grid-margin stretch-card">
     <div class="card">
         <div class="card-body">
-            <h4 class="card-title">Gelen Mesajlar Sayfası</h4>
+            <h4 class="card-title">Giden Mesajlar Sayfası</h4>
             <p class="card-description">
             </p>
             <div class="table-responsive">
@@ -16,7 +16,7 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Gönderici</th>
+                            <th>Alıcı</th>
                             <th>Konu</th>
                             <th>Tarih</th>
                             <th>Mesajı Aç</th>
@@ -28,7 +28,7 @@
                             count++;
                             <tr>
                                 <td>@count</td>
-                                <td>@item.SenderEmail</td>
+                                <td>@item.ReceiverEmail</td>
                                 <td>@item.Title</td>
                                 <td>@item.SendDate.ToShortDateString()</td>
                                 <td><a href="#" class="btn btn-primary">Mesajı Aç</a></td>
@@ -41,5 +41,7 @@
         </div>
     </div>
 </div>
+
+
 
 

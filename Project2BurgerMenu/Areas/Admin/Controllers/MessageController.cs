@@ -8,6 +8,7 @@ using Project2BurgerMenu.Entities;
 
 namespace Project2BurgerMenu.Areas.Admin.Controllers
 {
+    [Authorize]
     public class MessageController : Controller
     {
         // GET: Admin/Message
@@ -16,40 +17,36 @@ namespace Project2BurgerMenu.Areas.Admin.Controllers
 
         public ActionResult Inbox()
         {
-            var values = context.Messages.ToList();
+            var userName = Session["x"];
+            var email=context.Admins.Where(x=>x.Username == userName).Select(y=>y.Email).FirstOrDefault();
+            var values=context.Messages.Where(x=>x.ReceiverEmail==email).ToList();
             return View(values);
         }
 
-        public ActionResult DetailMessage(int id)
+        public ActionResult SendBox()
         {
-            var value = context.Messages.Where(x => x.MessageID == id).FirstOrDefault();
-            value.IsRead = true;
-            context.SaveChanges();
-            return View(value);
+            var userName = Session["x"];
+            var email = context.Admins.Where(x => x.Username == userName).Select(y => y.Email).FirstOrDefault();
+            var values = context.Messages.Where(x => x.SenderEmail == email).ToList();
+            return View(values);
         }
 
-        public ActionResult MessageStatusChangeToTrue(int id)
+        public ActionResult NewMessage()
         {
-            var value = context.Messages.Where(x => x.MessageID == id).FirstOrDefault();
-            value.IsRead = true;
-            context.SaveChanges();
-            return RedirectToAction("Inbox");
+            return View();
         }
 
-        public ActionResult MessageStatusChangeToFalse(int id)
+        [HttpPost]
+        public ActionResult NewMessage(Message message)
         {
-            var value = context.Messages.Where(x => x.MessageID == id).FirstOrDefault();
-            value.IsRead = false;
+            var userName = Session["x"];
+            var email = context.Admins.Where(x => x.Username == userName).Select(y => y.Email).FirstOrDefault();
+            message.SenderEmail = email;
+            message.IsRead = false;
+            message.SendDate = DateTime.Now;
+            context.Messages.Add(message);
             context.SaveChanges();
-            return RedirectToAction("Inbox");
-        }
-
-        public ActionResult DeleteMessage(int id)
-        {
-            var values = context.Messages.Find(id);
-            context.Messages.Remove(values);
-            context.SaveChanges();
-            return RedirectToAction("Inbox");
+            return RedirectToAction("SendBox","Message", new {area="Admin"});
         }
     }
 }

@@ -139,6 +139,7 @@
     <Compile Include="Areas\Admin\Controllers\AdminLayoutController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\ChartController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ContactController.cs" />
     <Compile Include="Areas\Admin\Controllers\CreditCardController.cs" />
     <Compile Include="Areas\Admin\Controllers\MessageController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
@@ -152,6 +153,7 @@
     <Compile Include="Entities\About.cs" />
     <Compile Include="Entities\Admin.cs" />
     <Compile Include="Entities\Category.cs" />
+    <Compile Include="Entities\Contact.cs" />
     <Compile Include="Entities\DealOfTheDay.cs" />
     <Compile Include="Entities\Message.cs" />
     <Compile Include="Entities\Product.cs" />
@@ -187,6 +189,14 @@
     <Compile Include="Migrations\202410201144430_mig7.cs" />
     <Compile Include="Migrations\202410201144430_mig7.Designer.cs">
       <DependentUpon>202410201144430_mig7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202410221112318_mig8.cs" />
+    <Compile Include="Migrations\202410221112318_mig8.Designer.cs">
+      <DependentUpon>202410221112318_mig8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202410221306494_mig9.cs" />
+    <Compile Include="Migrations\202410221306494_mig9.Designer.cs">
+      <DependentUpon>202410221306494_mig9.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1717,10 +1727,13 @@
     <Content Include="Areas\Admin\Views\Category\CreateCategory.cshtml" />
     <Content Include="Areas\Admin\Views\Category\UpdateCategory.cshtml" />
     <Content Include="Areas\Admin\Views\Product\CategoryProducts.cshtml" />
-    <Content Include="Areas\Admin\Views\Message\Inbox.cshtml" />
-    <Content Include="Areas\Admin\Views\Message\DetailMessage.cshtml" />
     <Content Include="Areas\Admin\Views\CreditCard\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Chart\ProductStockChart.cshtml" />
+    <Content Include="Areas\Admin\Views\Message\Inbox.cshtml" />
+    <Content Include="Areas\Admin\Views\Message\SendBox.cshtml" />
+    <Content Include="Areas\Admin\Views\Message\NewMessage.cshtml" />
+    <Content Include="Areas\Admin\Views\Contact\InboxContact.cshtml" />
+    <Content Include="Areas\Admin\Views\Contact\DetailMessage.cshtml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -1770,7 +1783,6 @@
     <Folder Include="regal\.git\objects\pack\" />
     <Folder Include="regal\.git\refs\tags\" />
     <Folder Include="regal\template\" />
-    <Folder Include="Views\Message\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -1820,6 +1832,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202410201144430_mig7.resx">
       <DependentUpon>202410201144430_mig7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202410221112318_mig8.resx">
+      <DependentUpon>202410221112318_mig8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202410221306494_mig9.resx">
+      <DependentUpon>202410221306494_mig9.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

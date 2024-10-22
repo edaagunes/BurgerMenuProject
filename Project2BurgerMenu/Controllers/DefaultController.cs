@@ -18,11 +18,11 @@ namespace Project2BurgerMenu.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(Message message)
+        public ActionResult Index(Contact contact)
         {
-            message.SendDate = DateTime.Now;
-            message.IsRead = false;
-            context.Messages.Add(message);
+            contact.SendDate = DateTime.Now;
+            contact.IsRead = false;
+            context.Contacts.Add(contact);
             context.SaveChanges();
             return RedirectToAction("Index");
         }
