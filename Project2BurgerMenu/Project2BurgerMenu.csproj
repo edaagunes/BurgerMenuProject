@@ -1774,6 +1774,7 @@
     <Content Include="Views\Default\PartialCategory.cshtml" />
     <Content Include="Views\Default\PartialReservation.cshtml" />
     <Content Include="Views\Default\PartialContact.cshtml" />
+    <Content Include="Views\Default\PartialLocation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
