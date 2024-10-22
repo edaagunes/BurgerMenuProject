@@ -1773,6 +1773,7 @@
     <Content Include="Views\Default\PartialScript.cshtml" />
     <Content Include="Views\Default\PartialCategory.cshtml" />
     <Content Include="Views\Default\PartialReservation.cshtml" />
+    <Content Include="Views\Default\PartialContact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

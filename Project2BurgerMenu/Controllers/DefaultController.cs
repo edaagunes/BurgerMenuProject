@@ -43,6 +43,12 @@ namespace Project2BurgerMenu.Controllers
             return PartialView(values);
         }
 
+        public PartialViewResult PartialContact()
+        {
+            var values = context.Abouts.ToList();
+            return PartialView(values);
+        }
+
         public PartialViewResult PartialTodaysOffer()
         {
             var values = context.Products.Where(x => x.DealofTheDay == true).ToList();
