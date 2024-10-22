@@ -158,6 +158,7 @@
     <Compile Include="Entities\Message.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\Reservation.cs" />
+    <Compile Include="Entities\Subscribe.cs" />
     <Compile Include="Entities\Testimonial.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -197,6 +198,14 @@
     <Compile Include="Migrations\202410221306494_mig9.cs" />
     <Compile Include="Migrations\202410221306494_mig9.Designer.cs">
       <DependentUpon>202410221306494_mig9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202410222014569_mig10.cs" />
+    <Compile Include="Migrations\202410222014569_mig10.Designer.cs">
+      <DependentUpon>202410222014569_mig10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202410222100564_mig11.cs" />
+    <Compile Include="Migrations\202410222100564_mig11.Designer.cs">
+      <DependentUpon>202410222100564_mig11.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1840,6 +1849,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202410221306494_mig9.resx">
       <DependentUpon>202410221306494_mig9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202410222014569_mig10.resx">
+      <DependentUpon>202410222014569_mig10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202410222100564_mig11.resx">
+      <DependentUpon>202410222100564_mig11.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -63,7 +63,7 @@ namespace Project2BurgerMenu.Controllers
 
         public PartialViewResult PartialMenu()
         {
-            var values=context.Products.ToList();
+            var values = context.Products.ToList();
             return PartialView(values);
         }
         public PartialViewResult PartialCategory()
@@ -79,6 +79,21 @@ namespace Project2BurgerMenu.Controllers
 
         public PartialViewResult PartialFooter()
         {
+            ViewBag.description = context.Abouts.Select(x => x.Description).FirstOrDefault();
+            return PartialView();
+        }
+
+        [HttpPost]
+        public ActionResult PartialSubscribe(Subscribe subscribe)
+        {
+            if (ModelState.IsValid)
+            {
+                context.Subscribes.Add(subscribe);
+                context.SaveChanges();
+             
+                return RedirectToAction("Index", "Default");
+            }
+
             return PartialView();
         }
 
