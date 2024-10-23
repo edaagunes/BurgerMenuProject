@@ -1,4 +1,6 @@
-﻿<div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="reservationModalLabel" aria-hidden="true">
+﻿@model List<Project2BurgerMenu.Entities.Reservation>
+
+<div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="reservationModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-body">
@@ -11,7 +13,7 @@
                             <small>Vazgeç </small><span aria-hidden="true">&times;</span>
                         </button>
                         <h1 class="mb-4">Bir Masa Ayırın</h1>
-                        <form method="post">
+                        <form method="post" action="@Url.Action("PartialReservation", "Default")">
                             <div class="row">
                                 <div class="col-md-6 form-group">
                                     <label for="m_fname">Adınız</label>
@@ -31,11 +33,11 @@
                             <div class="row">
                                 <div class="col-md-6 form-group">
                                     <label for="m_people">Kaç Kişisiniz</label>
-                                    <select name="" id="m_people" class="form-control">
+                                    <select name="PeopleCount" id="m_people" class="form-control">
                                         <option value="1">1 Kişi</option>
                                         <option value="2">2 Kişi</option>
                                         <option value="3">3 Kişi</option>
-                                        <option value="4+">4+ Kişi</option>
+                                        <option value="4">4+ Kişi</option>
                                     </select>
                                 </div>
                                 <div class="col-md-6 form-group">
@@ -76,4 +78,23 @@
         </div>
     </div>
 </div>
-
+<script src="~/Scripts/jquery-3.7.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#reservationModal form').on('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+            $.ajax({
+                type: 'POST',
+                url: $(this).attr('action'), // Get action URL
+                data: $(this).serialize(), // Serialize form data
+                success: function (result) {
+                    // Handle success response (e.g., show success message, close modal)
+                    $('#reservationModal').modal('hide');
+                },
+                error: function (xhr, status, error) {
+                    // Handle error response (e.g., show error message)
+                }
+            });
+        });
+    });
+</script>

@@ -63,18 +63,19 @@ namespace Project2BurgerMenu.Controllers
 
         public PartialViewResult PartialMenu()
         {
-            var values = context.Products.ToList();
-            return PartialView(values);
+            var products = context.Products.ToList();
+            return PartialView("PartialMenu", products);
         }
         public PartialViewResult PartialCategory()
         {
             var values = context.Categories.Take(6).ToList();
-            return PartialView(values);
+            return PartialView("PartialCategory", values);
         }
 
         public PartialViewResult PartialGallery()
         {
-            return PartialView();
+            var products = context.Products.Take(6).ToList();
+            return PartialView(products);
         }
 
         public PartialViewResult PartialFooter()
@@ -112,7 +113,7 @@ namespace Project2BurgerMenu.Controllers
         public PartialViewResult PartialReservation(Reservation reservation)
         {
             reservation.ReservationStatus = "Onay Bekleniyor";
-            reservation.PeopleCount = 0;
+          //  System.Diagnostics.Debug.WriteLine($"PeopleCount: {reservation.PeopleCount}");
             reservation.ReservationDate = DateTime.Now;
             context.Reservations.Add(reservation);
             context.SaveChanges();

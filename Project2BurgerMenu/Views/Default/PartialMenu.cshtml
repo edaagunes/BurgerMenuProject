@@ -1,4 +1,4 @@
-﻿@model List<Project2BurgerMenu.Entities.Product>
+﻿﻿@model List<Project2BurgerMenu.Entities.Product>
 @{ int count = 0; }
 
 <section class="site-section" id="section-menu">
@@ -23,6 +23,7 @@
 
                             @foreach (var item in Model)
                             {
+
                                 count++;
                                 if (count % 2 == 1)
                                 {
@@ -51,6 +52,7 @@
                                     </div>
                                 }
                             }
+
                         </div>
                     </div>
                 </div>
@@ -58,4 +60,3 @@
         </div>
     </div>
 </section>
-
