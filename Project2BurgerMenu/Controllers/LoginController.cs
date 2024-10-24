@@ -26,7 +26,8 @@ namespace Project2BurgerMenu.Controllers
             {
                 FormsAuthentication.SetAuthCookie(values.Username, false);
                 Session["x"] = values.Username.ToString();
-                return RedirectToAction("ProductList", "Product", new { area = "Admin" });
+                Session["FullName"] = values.Name + " " + values.Surname;
+                return RedirectToAction("Index", "Dashboard", new { area = "Admin" });
             }
             else
             {
