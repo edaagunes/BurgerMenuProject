@@ -17,7 +17,7 @@ namespace Project2BurgerMenu.Areas.Admin.Controllers
             ViewBag.products = context.Products.Count();
             ViewBag.reservations=context.Reservations.Count();
             ViewBag.admins=context.Admins.Count();
-            ViewBag.testimonials=context.Testimonials.Count();
+            ViewBag.testimonials=context.Contacts.Count();
             ViewBag.productNames = context.Products.Select(p => p.ProductName).ToList();
             ViewBag.productPrices = context.Products.Select(p => p.Price).ToList();
             ViewBag.productCategory = context.Products.Select(p => p.Category.CategoryName).ToList();
