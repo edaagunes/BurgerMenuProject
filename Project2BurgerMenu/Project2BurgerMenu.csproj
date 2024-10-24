@@ -1743,6 +1743,7 @@
     <Content Include="Areas\Admin\Views\Message\NewMessage.cshtml" />
     <Content Include="Areas\Admin\Views\Contact\InboxContact.cshtml" />
     <Content Include="Areas\Admin\Views\Contact\DetailMessage.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminLayout\PartialCategoryAdd.cshtml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />

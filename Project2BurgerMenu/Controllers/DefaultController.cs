@@ -72,6 +72,18 @@ namespace Project2BurgerMenu.Controllers
             return PartialView("PartialCategory", values);
         }
 
+        public PartialViewResult GetProductsByCategory(int categoryId)
+        {
+            var products = context.Products.Where(p => p.CategoryID == categoryId).ToList();
+            if (!products.Any())
+            {
+                // Ürün yoksa konsola bir mesaj yazdır
+                Console.WriteLine($"Kategori {categoryId} için ürün bulunamadı.");
+            }
+            Console.WriteLine($"Kategori ID: {categoryId}, Ürün Sayısı: {products.Count}");
+            return PartialView("PartialMenu", products);
+        }
+
         public PartialViewResult PartialGallery()
         {
             var products = context.Products.Take(6).ToList();
@@ -91,7 +103,7 @@ namespace Project2BurgerMenu.Controllers
             {
                 context.Subscribes.Add(subscribe);
                 context.SaveChanges();
-             
+
                 return RedirectToAction("Index", "Default");
             }
 
@@ -113,7 +125,7 @@ namespace Project2BurgerMenu.Controllers
         public PartialViewResult PartialReservation(Reservation reservation)
         {
             reservation.ReservationStatus = "Onay Bekleniyor";
-          //  System.Diagnostics.Debug.WriteLine($"PeopleCount: {reservation.PeopleCount}");
+            //  System.Diagnostics.Debug.WriteLine($"PeopleCount: {reservation.PeopleCount}");
             reservation.ReservationDate = DateTime.Now;
             context.Reservations.Add(reservation);
             context.SaveChanges();

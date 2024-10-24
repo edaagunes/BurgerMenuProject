@@ -1,0 +1,57 @@
+﻿@model List<Project2BurgerMenu.Entities.Category>
+
+<div class="modal fade" id="categoryModal" tabindex="-1" role="dialog" aria-labelledby="categoryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12 p-5">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <small>Vazgeç </small><span aria-hidden="true">&times;</span>
+                        </button>
+                        <h1 class="mb-4">Bir Kategori Ekleyin</h1>
+                        <form method="post" action="@Url.Action("PartialCategoryAdd", "AdminLayout", new { area = "Admin" })">
+                            <div class="row">
+                                <div class="col-md-12 form-group">
+                                    <label for="m_fname">Kategori Adı</label>
+                                    <input type="text" name="CategoryName" class="form-control" id="m_fname">
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3 text-center form-group">
+                                    <input type="submit" class="btn btn-primary btn-lg btn-block" value="Ekle">
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/jquery-3.7.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#categoryModal form').on('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+            $.ajax({
+                type: 'POST',
+                url: $(this).attr('action'), // Get action URL
+                data: $(this).serialize(), // Serialize form data
+                success: function (result) {
+                    // Handle success response (e.g., show success message, close modal)
+                    $('#categoryModal').modal('hide');
+                    $('body').removeClass('modal-open');
+                    $('.modal-backdrop').remove();
+                },
+                error: function (xhr, status, error) {
+                    // Handle error response (e.g., show error message)
+                }
+            });
+        });
+    });
+</script>

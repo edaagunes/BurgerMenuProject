@@ -13,46 +13,48 @@
                 </div>
             </div>
 
-            <div class="col-md-12 text-center">
+            <div class="col-md-12 text-center" id="menucontainer">
 
                 @Html.Action("PartialCategory", "Default")
 
                 <div class="tab-content text-left">
                     <div class="tab-pane fade show active" id="pills-breakfast" role="tabpanel" aria-labelledby="pills-breakfast-tab">
-                        <div class="row">
+                        <div class="row"  id="menu-container">
 
-                            @foreach (var item in Model)
+                            @if (Model != null && Model.Any())
                             {
+                                foreach (var item in Model)
+                                {
 
-                                count++;
-                                if (count % 2 == 1)
-                                {
-                                    <div class="col-md-6 site-animate">
-                                        <div class="media menu-item">
-                                            <img class="mr-3" src="@item.ImageUrl" class="img-fluid" alt="Free Template by colorlib.com">
-                                            <div class="media-body">
-                                                <h5 class="mt-0">@item.ProductName</h5>
-                                                <p>@item.Description</p>
-                                                <h6 class="text-primary menu-price">@item.Price ₺</h6>
+                                    count++;
+                                    if (count % 2 == 1)
+                                    {
+                                        <div class="col-md-6 site-animate" >
+                                            <div class="media menu-item">
+                                                <img class="mr-3" src="@item.ImageUrl" class="img-fluid" alt="Free Template by colorlib.com">
+                                                <div class="media-body">
+                                                    <h5 class="mt-0">@item.ProductName</h5>
+                                                    <p>@item.Description</p>
+                                                    <h6 class="text-primary menu-price">@item.Price ₺</h6>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                }
-                                else
-                                {
-                                    <div class="col-md-6 site-animate">
-                                        <div class="media menu-item">
-                                            <img class="mr-3" src="@item.ImageUrl" class="img-fluid" alt="Free Template by colorlib.com">
-                                            <div class="media-body">
-                                                <h5 class="mt-0">@item.ProductName</h5>
-                                                <p>@item.Description</p>
-                                                <h6 class="text-primary menu-price">@item.Price ₺</h6>
+                                    }
+                                    else
+                                    {
+                                        <div class="col-md-6 site-animate">
+                                            <div class="media menu-item">
+                                                <img class="mr-3" src="@item.ImageUrl" class="img-fluid" alt="Free Template by colorlib.com">
+                                                <div class="media-body">
+                                                    <h5 class="mt-0">@item.ProductName</h5>
+                                                    <p>@item.Description</p>
+                                                    <h6 class="text-primary menu-price">@item.Price ₺</h6>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    }
                                 }
                             }
-
                         </div>
                     </div>
                 </div>
