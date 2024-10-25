@@ -72,17 +72,6 @@ namespace Project2BurgerMenu.Controllers
             return PartialView("PartialCategory", values);
         }
 
-        public PartialViewResult GetProductsByCategory(int categoryId)
-        {
-            var products = context.Products.Where(p => p.CategoryID == categoryId).ToList();
-            if (!products.Any())
-            {
-                // Ürün yoksa konsola bir mesaj yazdır
-                Console.WriteLine($"Kategori {categoryId} için ürün bulunamadı.");
-            }
-            Console.WriteLine($"Kategori ID: {categoryId}, Ürün Sayısı: {products.Count}");
-            return PartialView("PartialMenu", products);
-        }
 
         public PartialViewResult PartialGallery()
         {

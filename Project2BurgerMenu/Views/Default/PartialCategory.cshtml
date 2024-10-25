@@ -1,10 +1,10 @@
-﻿﻿@model List<Project2BurgerMenu.Entities.Category>
+﻿@model List<Project2BurgerMenu.Entities.Category>
 
 <ul class="nav site-tab-nav nav-pills mb-5" id="pills-tab" role="tablist">
     @foreach (var item in Model)
     {
         <li class="nav-item site-animate">
-            <a class="nav-link active" data-toggle="pill" href="#" role="tab" aria-controls="pills-breakfast" aria-selected="true" onclick="loadProducts(@item.CategoryID)">
+            <a class="nav-link" data-toggle="pill" href="#" role="tab" aria-controls="pills-breakfast" aria-selected="true" onclick="showCategory(@item.CategoryID, this)">
                 @item.CategoryName
             </a>
         </li>
@@ -13,24 +13,23 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    function loadProducts(categoryId) {
-        $.ajax({
-            url: '@Url.Action("GetProductsByCategory", "Default")', // Controller'daki metot
-            type: 'GET',
-            data: { categoryId: categoryId },
-            success: function (result) {
-                $('#menu-container').empty(); // Mevcut içeriği temizle
-                $('#menu-container').html(result); // Yeni içeriği yükle
-                console.log('Seçilen Kategori ID: ', categoryId);
-                console.log(result);
-                console.log('Menu Container İçeriği: ', $('#menu-container').html());
-            },
-            error: function (xhr, status, error) {
-                console.error("Error: " + error);
-                console.error("Status: " + status);
-                console.dir(xhr);
-                alert('Ürünler yüklenirken bir hata oluştu.');
-            }
-        });
+    function showCategory(categoryId, element) {
+        // Tüm kategori ürünlerini gizle
+        $('.category-products').hide();
+
+        // Sadece seçilen kategori ürünlerini göster
+        $('.category-products[data-category-id="' + categoryId + '"]').show();
+
+        // Tüm tabların aktif sınıfını kaldır
+        $('.nav-link').removeClass('active');
+
+        // Tıklanan tabı aktif yap
+        $(element).addClass('active');
     }
+
+    // Başlangıçta ilk kategoriyi göster
+    $(document).ready(function () {
+        $('.category-products').hide();
+        $('.category-products[data-category-id="1"]').show(); // İlgili kategori ID'yi 1 olarak varsayalım
+    });
 </script>
