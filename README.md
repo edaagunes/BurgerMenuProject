@@ -4,7 +4,7 @@
 :star2:Bu projede kullanıcıların restauranta rezervasyon yapabilmesi, ürünleri kategorilerine göre görebilmesi, restauranta mesaj gönderebilmesi gerçekleştirildi.
 Admin tarafında yapılan rezervasyonların listelenmesi ve durumlarının güncellenebilmesi, ürün işlemleri, sisteme kayıtlı adminlerin birbirleri ile mesajlaşabilmesi, istatistikler ve grafikler gibi özellikler eklendi.
 
-### :purple_heart: [**Kullanıcı Tarafı**](#kullanici-tarafi)
+### :purple_heart: [**Kullanıcı Tarafı**](#kullanıcı-tarafı)
 
 🏠 Anasayfa, kullanıcılar rezervasyon modalı ile rezervasyon ekleyebilir.
 
@@ -20,7 +20,7 @@ Admin tarafında yapılan rezervasyonların listelenmesi ve durumlarının günc
 
 ✉️ Ayrıca restaurant bültenine Email ile abone olabilir.
 
-###  :muscle: [**Admin Tarafı**](#admin-tarafi)
+###  :muscle: [**Admin Tarafı**](#admin-tarafı)
 
 📊 Dashboard, admini sistem verilerini özetleyen bir dashboard paneli karşılar.
 
