@@ -53,12 +53,7 @@
                 <span class="menu-title">Hakkımızda</span>
             </a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="@Url.Action("InboxContact", "Contact", new { area = "Admin" })">
-                <i class="icon-ribbon"></i>
-                <span class="menu-title">Referanslar</span>
-            </a>
-        </li>
+
         <li class="nav-item">
             <a class="nav-link" href="@Url.Action("Index", "Statistics", new { area = "Admin" })">
                 <i class="icon-target"></i>
@@ -72,13 +67,19 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="@Url.Action("InboxContact", "Contact", new { area = "Admin" })">
+                <i class="icon-ribbon"></i>
+                <span class="menu-title">Referanslar</span>
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="@Url.Action("Index", "CreditCard", new { area = "Admin" })">
                 <i class="icon-marquee"></i>
                 <span class="menu-title">Kredi Kartı</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="../../pages/icons/feather-icons.html">
+            <a class="nav-link" href="@Url.Action("Index", "Settings", new { area = "Admin" })">
                 <i class="icon-help"></i>
                 <span class="menu-title">Ayarlar</span>
             </a>
