@@ -31,6 +31,13 @@ namespace Project2BurgerMenu.Areas.Admin.Controllers
             return View(values);
         }
 
+        public PartialViewResult PartialDetailMessage(int id)
+        {
+            var message = context.Messages.Find(id);
+           
+            return PartialView(message);
+        }
+
         public ActionResult NewMessage()
         {
             return View();

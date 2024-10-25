@@ -275,6 +275,8 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\admin.jpg" />
+    <Content Include="img\admin2.png" />
     <Content Include="img\chip.png" />
     <Content Include="img\visa.png" />
     <Content Include="regal\.gitattributes" />
@@ -1748,6 +1750,7 @@
     <Content Include="Areas\Admin\Views\AdminLayout\PartialCategoryAdd.cshtml" />
     <Content Include="Areas\Admin\Views\Dashboard\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Statistics\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Message\PartialDetailMessage.cshtml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />

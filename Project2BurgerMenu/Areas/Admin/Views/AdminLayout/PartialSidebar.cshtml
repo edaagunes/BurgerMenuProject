@@ -7,7 +7,7 @@
     </style>
     <div class="user-profile">
         <div class="user-image">
-            <img src="/regal/images/faces/face28.png">
+            <img src="~/img/admin2.png" />
         </div>
         <div class="user-name">
             @Session["FullName"]
@@ -42,9 +42,9 @@
             </a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="@Url.Action("Inbox", "Message", new { area = "Admin" })">
-            <i class="icon-mail"></i>
-            <span class="menu-title">Mesajlar</span>
+            <a class="nav-link" href="@Url.Action("Inbox", "Message", new { area = "Admin" })">
+                <i class="icon-mail"></i>
+                <span class="menu-title">Mesajlar</span>
             </a>
         </li>
         <li class="nav-item">
